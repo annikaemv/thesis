@@ -1,3 +1,5 @@
+# Source: yanofsky/tweet_dumper.py on Github
+
 import tweepy
 import csv
 
