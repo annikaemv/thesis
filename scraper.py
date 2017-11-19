@@ -38,13 +38,13 @@ def scrape_tweets(screen_name):
 
     with open('%s_tweets.csv' % screen_name, mode='w', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(["created_at", "text", "#retweets", "#favorites"])
+        writer.writerow(["id", "created_at", "text", "#retweets", "#favorites"])
         writer.writerows(out_tweets)
 
     pass
 
 if __name__ == '__main__':
-    scrape_tweets('BBCWorld')
+    scrape_tweets('NC5')
 
 # Selected screen_names:
 # BBCWorld
