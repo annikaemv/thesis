@@ -34,17 +34,17 @@ def scrape_tweets(screen_name):
 
         print("...%s tweets downloaded so far" % (len(all_tweets)))
 
-    out_tweets = [[tweet.id_str, tweet.created_at, tweet.text.encode("utf-8")] for tweet in all_tweets]
+    out_tweets = [[tweet.id_str, tweet.created_at, tweet.text.encode("utf-8"), tweet.retweet_count, tweet.favorite_count] for tweet in all_tweets]
 
     with open('%s_tweets.csv' % screen_name, mode='w', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(["created_at", "text"])
+        writer.writerow(["created_at", "text", "#retweets", "#favorites"])
         writer.writerows(out_tweets)
 
     pass
 
 if __name__ == '__main__':
-    scrape_tweets('NC5')
+    scrape_tweets('BBCWorld')
 
 # Selected screen_names:
 # BBCWorld
