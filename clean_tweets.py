@@ -36,5 +36,6 @@ def clean_text(dataframe):
         print(row)
     newdf['tweet'] = no_url_list
 
+clean_text(bbc)
 
 
