@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c298c40b-d13b-4ac4-a172-99aa6283e14f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bbc_readability_test.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clean_tweets.py" afterPath="$PROJECT_DIR$/clean_tweets.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +22,8 @@
       <file leaf-file-name="bbc.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bbc.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="59" />
+            <state relative-caret-position="136">
+              <caret line="129" column="34" lean-forward="false" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -31,8 +32,8 @@
       <file leaf-file-name="clean_tweets.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clean_tweets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+            <state relative-caret-position="930">
+              <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -50,6 +51,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>https</find>
+      <find>\xe2\x80\x9c</find>
+      <find>\xe2\x80\xa6</find>
+      <find>\xc3\xa9</find>
+      <find>\x</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -414,13 +419,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NashvilleScene_tweets.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scraper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -555,13 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scraper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bbcworld.py" />
     <entry file="file://$PROJECT_DIR$/AP_tweets.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -609,18 +600,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scraper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bbc.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="59" />
+        <state relative-caret-position="136">
+          <caret line="129" column="34" lean-forward="false" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ap_clean.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20985">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clean_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        <state relative-caret-position="930">
+          <caret line="63" column="21" lean-forward="false" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
           <folding />
         </state>
       </provider>
