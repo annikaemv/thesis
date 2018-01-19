@@ -1,12 +1,14 @@
 import pandas as pd
 import re
 
-ap = pd.read_csv('ap.csv')
-bbc = pd.read_csv('bbc.csv')
-nash_scene = pd.read_csv('nash_scene.csv')
-nc5 = pd.read_csv('nc5.csv')
-econ = pd.read_csv('the_economist.csv')
-time = pd.read_csv('time.csv')
+ap = pd.read_csv('ap_clean.csv')
+bbc = pd.read_csv('bbc_clean.csv')
+nash_scene = pd.read_csv('nash_scene_clean.csv')
+nc5 = pd.read_csv('nc5_clean.csv')
+econ = pd.read_csv('the_economist_clean.csv')
+time = pd.read_csv('time_clean.csv')
+
+anew_dataset = pd.read_csv('all.csv')
 
 
 # function to extract just tweet text from csv file
@@ -54,14 +56,44 @@ def clean_text(dataframe):
 def export_tweet(dataframe, name):
     dataframe.to_csv('/Users/powermac/PycharmProjects/news_thesis/' + name + '.csv', index=False)
 
-a = clean_text(ap)
-b = clean_text(bbc)
-n = clean_text(nash_scene)
-nc = clean_text(nc5)
-e = clean_text(econ)
-t = clean_text(time)
 
-export_tweet(t, 'time_clean')
+# Calculate valence, arousal, and dominance scores of each tweet
+def calculate_anew(dataframe):
+    anew_original = anew_dataset
+    anew = pd.DataFrame()
+    anew['Description'] = anew_original['Description']
+    anew['Valence Mean'] = anew_original['Valence Mean']
+    anew['Arousal Mean'] = anew_original['Arousal Mean']
+    anew['Dominance Mean'] = anew_original['Dominance Mean']
+
+    valence = []
+    arousal = []
+    dominance = []
+
+    for row in dataframe['tweet']:
+        vscore = 0
+        ascore = 0
+        dscore = 0
+        for word, val, aro, dom in zip(anew['Description'], anew['Valence Mean'],
+                                       anew['Arousal Mean'], anew['Dominance Mean']):
+            if word in row:
+                vscore += float(val)
+                ascore += float(aro)
+                dscore += float(dom)
+        valence.append(vscore)
+        arousal.append(ascore)
+        dominance.append(dscore)
+    dataframe['Valence'] = valence
+    dataframe['Arousal'] = arousal
+    dataframe['Dominance'] = dominance
+    print(dataframe)
+
+
+
+
+
+
+calculate_anew(ap)
 
 
 
